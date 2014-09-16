@@ -1,0 +1,4 @@
+stderr.log
+*.core
+a.out
+*.ll
