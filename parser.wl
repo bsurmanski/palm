@@ -1,16 +1,21 @@
 import "list.wl"
 import "element.wl"
+import "lexer.wl"
 import "file.wl"
 
 Element parseElement(File file) {
-    file.get()
+    Symbol sym = nextSymbol(file)
+    if(sym) {
+        sym.dump()
+    }
     return null
 }
 
-List parse() {
-    var file = new File("input.lm")
+List parse(File file) {
     var list = new List()
     while(!file.eof()) {
-        list.append(parseElement(file))
+        Element elem = parseElement(file)
+        if(elem)
+            list.append(elem)
     }
 }

@@ -12,6 +12,12 @@ class Node {
         .prev = p
         .value = e
     }
+
+    ~this() {
+        .value = null
+        .next = null
+        .prev = null
+    }
 }
 
 class List {
