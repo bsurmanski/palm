@@ -3,19 +3,18 @@ import "file.wl"
 
 Element parseElement(File file) {
     Element sym = nextElement(file)
-    if(sym) {
-        sym.dump()
-    }
-    return null
+    return sym
 }
 
 Element parse(File file) {
-    Element elem
+    Element ret
     while(!file.eof()) {
-        elem = parseElement(file)
+        skipWhitespace(file)
+        if(file.eof()) break
+        ret = parseElement(file)
     }
 
-    return elem
+    return ret
 }
 
 void skipWhitespace(File file) {

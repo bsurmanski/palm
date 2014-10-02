@@ -1,0 +1,13 @@
+(lm
+    (head
+        title: "hello"
+    )
+    (hash 
+        a: 567 
+        b: "hello" 
+        c: h 
+        d: 5.678)
+    (body:
+        (button text: hello))
+    )
+)

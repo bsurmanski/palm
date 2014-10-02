@@ -1,0 +1,4 @@
+(lm
+    (or (id 0) (pos 0 0 0 1) (rot 0 0 0 0))
+    (and (id 1) (pos 0 0 0 1) (rot 0 0 0 0))
+)

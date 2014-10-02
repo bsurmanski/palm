@@ -12,7 +12,7 @@ class Element {
         .next = null
     }
 
-    bool isList() return true
+    bool isList() return false
     bool isId() return false
     bool isToken() return false
     bool isNumeric() return false
@@ -84,7 +84,7 @@ class NumericElement : Element {
     bool isNumeric() return true
 }
 
-class IntElement : Element {
+class IntElement : NumericElement {
     long value
 
     this(long value) {
@@ -98,7 +98,7 @@ class IntElement : Element {
     }
 }
 
-class FloatElement : Element {
+class FloatElement : NumericElement {
     double value
 
     this(double value) {
